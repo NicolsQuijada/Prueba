@@ -1,0 +1,11 @@
+#rectangulo
+{
+   position: absolute;
+   background-color: gainsboro;
+   border: 3px solid gray;
+   width: 500px;
+   height: 250px;
+   top: calc(50% - 350px);
+   left: calc(50% - 250px);
+
+}
