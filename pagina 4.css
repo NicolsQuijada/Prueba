@@ -1,5 +1,4 @@
-#rectangulo
-{
+#rectangulo {
    position: absolute;
    background-color: gainsboro;
    border: 3px solid gray;
@@ -7,5 +6,11 @@
    height: 250px;
    top: calc(50% - 350px);
    left: calc(50% - 250px);
+}
 
+#button {
+   top: 50%;
+   left: 50%;
+   text-align: center;
+   margin-top: 15px;
 }
