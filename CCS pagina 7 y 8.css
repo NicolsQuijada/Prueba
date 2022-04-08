@@ -33,3 +33,28 @@
 {
     text-align: center;
 }
+
+#margen{
+    margin-top: 15px;
+}
+
+#margencentro{
+    margin-top: 30px;
+}
+
+#margencentro2{
+    margin-top: 50px;
+}
+
+#margencentro3{
+    margin-top: 80px;
+}
+#rectangulo1
+{
+    position: absolute;
+    background-color: wheat;
+    width: 400px;
+    height: 50px;
+    top: calc(50% - 300px);
+    left: calc(60% - 20px);
+}
