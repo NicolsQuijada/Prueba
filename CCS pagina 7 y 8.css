@@ -1,18 +1,18 @@
 #rectangulo
 {
     position: absolute;
-    background-color: white;
-    border: 3px solid gray;
-    width: 500px;
+    background-color: wheat;
+    width: 400px;
     height: 245px;
-    top: calc(50% - 450px);
-    left: calc(50% - 250px);
+    top: calc(50% - 210px);
+    left: calc(50% - 195px);
 }
 #button
 {   
     top: 50%;
     left: 50%;
     text-align: center;
+
 
 }
 #parrafo1
@@ -24,4 +24,12 @@
 {
     text-align: center;
     font-size: 50px;
+}
+#body
+{
+    background-color: wheat;
+}
+#h1
+{
+    text-align: center;
 }
