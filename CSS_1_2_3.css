@@ -1,3 +1,24 @@
-#Derecha{
-    text-align: right;
+.body{
+    background-image: url(./Imagenes/Fondo.jpg);
+    background-repeat: repeat;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#margen{
+    margin-top: 15px;
+}
+
+#margencentro{
+    margin-top: 30px;
+}
+
+#margencentro2{
+    margin-top: 50px;
+}
+
+#margencentro3{
+    margin-top: 80px;
 }
