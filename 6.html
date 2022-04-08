@@ -9,16 +9,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio Sesión</title>
+    <link type="text/css" rel="stylesheet" href="pagina 4.css" />
+    <title>Registrate</title>
 </head>
-<body>
-    <div id="">
-        <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">@</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-          </div>
-
+<body id="body">
+    <div id="registro">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Registro</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre de usuario">
     </div>
+    <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Contraseña</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="Contraseña">
+    </div>
+    <div id="contraseña" class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Confirme Contraseña</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="Confirmar Contraseña">
+    </div>
+    <div class="col-auto">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="@ejemplo.com">
+      </div>
+    <div class="col-12">
+        <label for="inputAddress" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="ejemplo 0000">
+      </div>
+      <div class="col-auto" id="registrado">
+            <a href="2.html"><button type="submit" class="btn btn-primary mb-3">Registrarse</button></a>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
     crossorigin="anonymous"></script>
