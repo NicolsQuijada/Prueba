@@ -10,13 +10,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="pagina 4.css" />
-    <title>Inicio Sesión</SEct></title>
+    <link type="text/css" rel="stylesheet" href="pagina 4,6.css" />
+    <title>Inicio Sesión</SEct>
+    </title>
 </head>
 
 <body id="body">
-     <!--Inicio NavBar-->
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--Inicio NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="HTML.html">Nombre Tienda</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -51,21 +52,24 @@
         </div>
     </nav>
     <!--Termino NavBar-->
-    <div id="rectangulo">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Login</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+    <form>
+        <div id="rectangulo">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Login</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo o Usuario">
+            </div>
+            <div class="col-auto">
+                <label for="inputPassword2" class="visually-hidden">Clave</label>
+                <input type="password" class="form-control" id="inputPassword2" placeholder="Clave">
+            </div>
+            <div class="col-auto" id="button">
+                <a href="2.html"><button type="button" class="btn btn-primary mb-3">Iniciar Sesión</button></a>
+
+                <ul>Si no tienes una cuenta registrate<a href="6.html"><button type="button"
+                            class="btn btn-secondary btn-sm"> Aqui</button></a></ul>
+            </div>
         </div>
-        <div class="col-auto">
-            <label for="inputPassword2" class="visually-hidden">Contraseña</label>
-            <input type="password" class="form-control" id="inputPassword2" placeholder="Contraseña">
-        </div>
-        <div class="col-auto" id="button">
-            <button type="submit" class="btn btn-primary mb-3">Iniciar Sesión</button>
-            
-            <ul>Si no tienes una cuenta registrate<a href="6.html"><button type="button" class="btn btn-secondary btn-sm">Aqui</button></a></ul>
-        </div>
-    </div>
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
