@@ -11,6 +11,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="CSS_1_2_3.css" />
+
+    <script src="JS/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>Pagina principal</title>
 </head>
 
@@ -659,6 +663,54 @@
             </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <h2>Tu ubicacion actual</h2>
+        </div>
+        <div class="row g-2">
+            <div class="col-md-1">
+                <button class="btn btn-primary" id="btnLocalizar">Localizar</button>
+            </div>
+            <div class="col-md-4">
+                <div id="resultado"></div>
+            </div>
+
+            <footer>
+                <div class="row g-2">
+                    <div class=""></div>
+                </div>
+            </footer>
+
+        </div>
+        <script>
+            var x = document.getElementById("resultado");
+
+            $("#btnLocalizar").click(function () {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    let lat = position.coords.latitude;
+                    let long = position.coords.longitude;
+
+                    $.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&lang=sp&units=metric&appid=e7f7bdc257804d7dd9bc1b7af07e2a26", function (data) {
+                        console.log(data);
+                        $("#resultado").empty();
+                        $("#resultado").append("<ul>");
+                        $("#resultado").append("<li>Codigo Pais: " + data.sys.country + "</li>");
+                        $("#resultado").append("<li>Ciudad/Comuna :" + data.name + "</li>");
+                        $("#resultado").append("<li>Latitud:" + data.coord.lat + "</li>");
+                        $("#resultado").append("<li>Longitud:" + data.coord.lon + "</li>");
+                        
+                    });
+                });
+            });
+        </script>
+    </div>
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
