@@ -13,6 +13,8 @@
     <link type="text/css" rel="stylesheet" href="pagina 4,6.css" />
     <title>Inicio Sesión</SEct>
     </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body id="body">
@@ -56,26 +58,63 @@
         <div id="rectangulo">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Login</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo o Usuario">
+                <input type="email" class="form-control" id="email" placeholder="Correo o Usuario" required>
             </div>
-            <div class="col-auto">
+            <div class="mb-3">
                 <label for="inputPassword2" class="visually-hidden">Clave</label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="Clave">
+                <input type="password" class="form-control" id="Clave" placeholder="Clave" required>
             </div>
-            <div class="col-auto" id="button">
-                <a href="2.html"><button type="button" class="btn btn-primary mb-3">Iniciar Sesión</button></a>
-
+            <div id="liveAlertPlaceholder" class="col-auto">
+                <div id="alert"></div>
+            </div>
+            <div class="mb-3">
+                <button type="button" class="btn btn-success" name="Conectar" id="Conectar">Iniciar Sesion</button>
+            </div>
+            <div class="mb-3">
                 <ul>Si no tienes una cuenta registrate<a href="6.html"><button type="button"
-                            class="btn btn-secondary btn-sm"> Aqui </button></a></ul>
+                    class="btn btn-secondary btn-sm"> Aqui </button></a></ul>
             </div>
         </div>
     </form>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
+
 </body>
+
+<script>
+    var alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+    var alertTrigger = document.getElementById('Conectar');
+
+    function alert(message, type) {
+        document.getElementById("alert").innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+    }
+    $(document).ready(function () {
+        $("#Conectar").click(function () {
+            var Clave = $("#Clave").val();
+
+            if (Clave.length > 0) { //Validamos el espacio del usuario no este vacio
+                var email = $("#email").val();
+                if (email.includes("@gmail") || email.includes("@hotmail") || email.includes("@outlook")) { //Validamos que el formato del correo sea valido
+                    if (alertTrigger) {
+                        alertTrigger.addEventListener('click', function () {
+                            alert('Has ingresado correctamente los valores de tu cuenta!', 'success');
+                        })
+                    }
+                } else {
+                    if (alertTrigger) {
+                        alertTrigger.addEventListener('click', function () {
+                            alert('Formato de Correo Incorrecto', 'danger');
+                        })
+                    }
+                }
+            } else {
+                if (alertTrigger) {
+                    alertTrigger.addEventListener('click', function () {
+                        alert('Campo Usuario o Clave no puede estar vacio', 'danger');
+                    })
+                }
+            }
+        });
+    });
+</script>
+
 
 </html>
